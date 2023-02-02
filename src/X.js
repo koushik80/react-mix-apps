@@ -9,7 +9,7 @@ const X = () => {
 
   return (
     <>
-    <input type={inputType} min={minValue} max={maxValue} list={[1,2,3]} style={{color: 'teal', fontWeight:'bold', border:'3px solid red'}} />
+    <input type={inputType} min={minValue} max={maxValue} list={[1,2,3]} style={{color: 'teal', fontWeight: 'bold', border:'3px solid red'}} />
     <div>
         <h2>{new Date().toLocaleTimeString()}</h2>
         <h2>My name is {name} and I am {age} years old.</h2>
