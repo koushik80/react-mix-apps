@@ -17,9 +17,9 @@ const App = () => {
     setAnimals([...animals, getRandomAnimal()]);
   };
 
-  const renderedAnimals = animals.map((animal, index) => {
-    return <AnimalShow type={animal} key={index} />
-  })
+  const renderedAnimals = animals.map((animal, i) => {
+    return <AnimalShow type={animal} key={i} />;
+  });
 
   return (
     <div>
