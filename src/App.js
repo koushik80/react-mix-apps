@@ -1,32 +1,37 @@
-import 'bulma/css/bulma.css'
-import ProfileCard from './ProfileCard'
-import AlexaImage from './images/alexa.png'
-import CortanaImage from './images/cortana.png'
-import SiriImage from './images/siri.png'
+import 'bulma/css/bulma.css';
+import { useState } from 'react';
+import AnimalShow from './AnimalShow';
+
+function getRandomAnimal() {
+  const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse'];
+
+  return animals[Math.floor(Math.random() * animals.length)];
+}
+
+//console.log(getRandomAnimals());
 
 const App = () => {
+  const [animals, setAnimals] = useState([]);
+
+  const handleClick = () => {
+    setAnimals([...animals, getRandomAnimal()]);
+  };
+
   return (
     <div>
+      <button onClick={handleClick}>Add Animal</button>
+
+      <AnimalShow type={animals.bird} />
+      <AnimalShow type="cat" />
+      <AnimalShow type="cow" />
+      <AnimalShow type="dog" />
+      <AnimalShow type="gator" />
+      <AnimalShow type="horse" />
       <div>
-        <h1>Personal Digital Assistants</h1>
-      </div>
-      <div className="container">
-        <section className="section">
-          <div className="columns">
-            <div className="column is-4">
-              <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImage} />
-            </div>
-            <div className="column is-4">
-              <ProfileCard title="Crotana" handle="@crotana32" image={CortanaImage} />
-            </div>
-            <div className="column is-4">
-              <ProfileCard title="Siri" handle="@siri01" image={SiriImage} />
-            </div>
-          </div>
-        </section>
+        {animals}
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
