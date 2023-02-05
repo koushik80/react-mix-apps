@@ -1,5 +1,5 @@
-# Animal show
+# Photo-gallery by using unsplash api
 
 </div>
-<h2 align="center"><a href="https://animal-show.netlify.app/">Animal Show</a></h2>
+<h2 align="center"><a href="">Photo-gallery</a></h2>
 </div>

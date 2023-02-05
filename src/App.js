@@ -6,12 +6,14 @@ import ImageList from './components/ImageList';
 import ImageShow from './components/ImageShow';
 
 
-
 const App = () => {
+  const handleSubmit = (term) => {
+    console.log('Do a search with', term);
+  };
 
   return (
     <div className="app">
-      <SearchBar />
+      <SearchBar onSubmit={handleSubmit} />
       <ImageList />
       <ImageShow />
     </div>
